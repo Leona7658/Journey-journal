@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Library"
+        android:icon="@drawable/library_icon"
+        android:id="@+id/library"/>
+    <item
+        android:title="Trip"
+        android:icon="@drawable/trip_icon"
+        android:id="@+id/trip"/>
+    <item
+        android:title="Achievement"
+        android:icon="@drawable/achievement_icon"
+        android:id="@+id/achievement"/>
+    <item
+        android:title="Profile"
+        android:icon="@drawable/profile_icon"
+        android:id="@+id/profile"/>
+</menu>

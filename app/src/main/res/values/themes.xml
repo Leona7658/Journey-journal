@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.FirebaseAuth" parent="Theme.Material3.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_image</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/bottom_sheet_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/bottom_sheet_exit_anim</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/image_source_dialog_background</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FirebaseAuth" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+</resources>

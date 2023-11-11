@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <!-- Top Bar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white">
+
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/ic_arrow_back" />
+
+            <!-- Toolbar Title -->
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="View Memory Gallery"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+        </androidx.appcompat.widget.Toolbar>
+
+    <!-- Scrollable Content -->
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- Location Text based on Latitude and Longitude from the database -->
+
+                <!-- Image retrieved from the database -->
+                <!-- Tag Text from the database -->
+
+                <TextView
+                    android:id="@+id/locationText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Canggu, Bali, Indonesia"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/memoryImage"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/library_grey"
+                    android:src="@drawable/sample_trip_icon"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/locationText" />
+                <ImageButton
+                    android:id="@+id/leftArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/white_ic_arrow_left"
+                    app:layout_constraintVertical_bias="0.5"
+                    android:layout_marginEnd="-40dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/memoryImage"
+                    app:layout_constraintTop_toTopOf="@+id/memoryImage"
+                    app:layout_constraintEnd_toStartOf="@+id/memoryImage" />
+                <ImageButton
+                    android:id="@+id/rightArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/right_ic_arrow_right"
+                    app:layout_constraintVertical_bias="0.5"
+                    android:layout_marginStart="-40dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/memoryImage"
+                    app:layout_constraintTop_toTopOf="@+id/memoryImage"
+                    app:layout_constraintStart_toEndOf="@+id/memoryImage" />
+
+                <TextView
+                    android:id="@+id/storyTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Travel Notes"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/memoryImage" />
+
+                <TextView
+                    android:id="@+id/tagText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:drawableStart="@drawable/tag_icon"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:text="Forest"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/storyTitle" />
+
+                <!-- Memory Content Text from the database -->
+                <TextView
+                    android:id="@+id/memoryContentText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="This sunset is so beautiful..."
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tagText" />
+                <!-- Date Text from the database -->
+                <TextView
+                    android:id="@+id/dateText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="12/07/2023"
+                    android:gravity="right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/memoryContentText" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

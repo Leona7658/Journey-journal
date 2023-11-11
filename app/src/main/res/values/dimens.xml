@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="marker_background_width">70dp</dimen> <!-- Adjust this value as needed -->
+    <dimen name="marker_background_height">70dp</dimen> <!-- Adjust this value as needed -->
+
+    <dimen name="marker_image_width">50dp</dimen> <!-- Adjust this value to be slightly less than the background -->
+    <dimen name="marker_image_height">50dp</dimen> <!-- Adjust this value to be slightly less than the background -->
+</resources>

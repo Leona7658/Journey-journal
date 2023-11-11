@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Journey Journal</string>
+    <string name="login">Login</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="register">Register</string>
+    <string name="click_to_login">click to login</string>
+    <string name="click_to_register">click to register</string>
+    <string name="logout">logout</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_button_description">Add tag button</string>
+    <string name="close_button_description">Close tag button</string>
+    <string name="item_restaurant">Restaurant</string>
+    <string name="item_forest">Forest</string>
+    <string name="item_beach">Beach</string>
+    <string name="item_mountain">Mountain</string>
+    <string name="item_museum">Museum</string>
+    <string name="item_others">Others</string>
+    <string-array name="dropdown_items">
+        <item>@string/item_restaurant</item>
+        <item>@string/item_forest</item>
+        <item>@string/item_beach</item>
+        <item>@string/item_mountain</item>
+        <item>@string/item_museum</item>
+        <item>@string/item_others</item>
+    </string-array>
+    <string name="title_activity_camera">Camera</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+</resources>

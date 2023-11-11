@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile.Profile">
+
+    <ViewFlipper
+        android:id="@+id/profile_view_flipper"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_main_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_personal_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/profile_background"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="50dp"
+                        android:src="@drawable/profile_background"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:src="@drawable/avatar_edge"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="50dp"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_avatar"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="@drawable/default_avatar"
+                        app:layout_constraintTop_toTopOf="@id/profile_image"
+                        app:layout_constraintStart_toStartOf="@id/profile_image"
+                        app:layout_constraintEnd_toEndOf="@id/profile_image"
+                        app:layout_constraintBottom_toBottomOf="@+id/profile_image"/>
+
+                    <TextView
+                        android:id="@+id/profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User Name"
+                        android:textStyle="bold"
+                        android:textSize="22sp"
+                        app:layout_constraintTop_toBottomOf="@id/profile_image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="15dp"
+                        android:paddingBottom="30dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_account_title"
+                android:text="Settings"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/profile_personal_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_settings_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/profile_account_title"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:cardBackgroundColor="@color/lighter_grey"
+                app:cardCornerRadius="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:cardElevation="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/profile_settings_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:hintEnabled="false"
+                        app:boxStrokeWidth="0dp">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/profile_settings_username_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textSize="15sp"
+                            android:hint="Username"
+                            android:textColorHint="@color/black"
+                            android:drawableEnd="@drawable/right_arrow_icon"
+                            android:drawableTint="@color/black"
+                            android:drawablePadding="12dp"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="10dp"
+                            android:inputType="none"
+                            android:focusable="false"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:id="@+id/profile_divider_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/lighter_grey"
+                        app:layout_constraintTop_toBottomOf="@+id/profile_settings_username"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/profile_settings_tags"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="false"
+                        app:boxStrokeWidth="0dp"
+                        app:layout_constraintTop_toBottomOf="@+id/profile_settings_username">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/profile_settings_tags_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textSize="15sp"
+                            android:hint="Tags"
+                            android:textColorHint="@color/black"
+                            android:drawableEnd="@drawable/right_arrow_icon"
+                            android:drawableTint="@color/black"
+                            android:drawablePadding="12dp"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="10dp"
+                            android:inputType="none"
+                            android:focusable="false"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:id="@+id/profile_divider_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/lighter_grey"
+                        app:layout_constraintTop_toBottomOf="@+id/profile_settings_tags"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/profile_settings_light_mode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="false"
+                        app:boxStrokeWidth="0dp"
+                        app:layout_constraintTop_toBottomOf="@+id/profile_settings_tags">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/profile_settings_light_mode_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textSize="15sp"
+                            android:hint="Light Mode"
+                            android:textColorHint="@color/black"
+                            android:drawableEnd="@drawable/right_arrow_icon"
+                            android:drawableTint="@color/black"
+                            android:drawablePadding="12dp"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="10dp"
+                            android:inputType="none"
+                            android:focusable="false"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_security_title"
+                android:text="Security"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/profile_settings_card_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_security_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/profile_security_title"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:cardBackgroundColor="@color/lighter_grey"
+                app:cardCornerRadius="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:cardElevation="1dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/profile_security_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:hintEnabled="false"
+                    app:boxStrokeWidth="0dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/profile_security_password_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="15sp"
+                        android:hint="Password"
+                        android:textColorHint="@color/black"
+                        android:drawableEnd="@drawable/right_arrow_icon"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="12dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:inputType="none"
+                        android:focusable="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_logout_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/profile_security_card_view"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:cardBackgroundColor="@color/lighter_grey"
+                app:cardCornerRadius="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="40dp"
+                app:cardElevation="1dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/profile_logout_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:hintEnabled="false"
+                    app:boxStrokeWidth="0dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/profile_logout_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="15sp"
+                        android:hint="Log out"
+                        android:gravity="center"
+                        android:textColorHint="@color/black"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:inputType="none"
+                        android:focusable="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_username_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lighter_grey">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_username_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardBackgroundColor="@color/lighter_orange"
+                app:cardElevation="1dp">
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/profile_username_left_arrow"
+                    android:background="@drawable/left_arrow_icon"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Username"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"/>
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:id="@+id/profile_username_ok_arrow"
+                    android:text="Save"
+                    android:textSize="13dp"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:background="@drawable/sharp_button"
+                    android:padding="0dp"
+                    android:layout_marginRight="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_username_text"
+                android:text="User Name"
+                android:maxLength="15"
+                android:inputType="text"
+                android:background="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/profile_username_card_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="15dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_tags_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lighter_grey">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_tags_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardBackgroundColor="@color/lighter_orange"
+                app:cardElevation="1dp">
+
+                <ImageButton
+                    android:id="@+id/profile_tags_left_arrow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/left_arrow_icon"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Your Tags"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"/>
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:id="@+id/profile_tags_ok_arrow"
+                    android:text="Save"
+                    android:textSize="13dp"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:background="@drawable/sharp_button"
+                    android:padding="0dp"
+                    android:layout_marginRight="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:id="@+id/profile_tags_tag1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/item_restaurant"
+                android:textSize="15sp"
+                android:textColorHint="@color/black"
+                android:drawableStart="@drawable/circle_shape"
+                android:drawableTint="@color/tag_red"
+                android:drawablePadding="55dp"
+                android:paddingStart="55dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@null"
+                app:layout_constraintTop_toBottomOf="@+id/profile_tags_card_view"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/profile_tags_tag2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/item_forest"
+                android:textSize="15sp"
+                android:textColorHint="@color/black"
+                android:drawableStart="@drawable/circle_shape"
+                android:drawableTint="@color/tag_green"
+                android:drawablePadding="55dp"
+                android:paddingStart="55dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@null"
+                app:layout_constraintTop_toBottomOf="@+id/profile_tags_tag1"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/profile_tags_tag3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/item_beach"
+                android:textSize="15sp"
+                android:textColorHint="@color/black"
+                android:drawableStart="@drawable/circle_shape"
+                android:drawableTint="@color/tag_blue"
+                android:drawablePadding="55dp"
+                android:paddingStart="55dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@null"
+                app:layout_constraintTop_toBottomOf="@+id/profile_tags_tag2"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/profile_tags_tag4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/item_mountain"
+                android:textSize="15sp"
+                android:textColorHint="@color/black"
+                android:drawableStart="@drawable/circle_shape"
+                android:drawableTint="@color/tag_yellow"
+                android:drawablePadding="55dp"
+                android:paddingStart="55dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@null"
+                app:layout_constraintTop_toBottomOf="@+id/profile_tags_tag3"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/profile_tags_tag5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/item_museum"
+                android:textSize="15sp"
+                android:textColorHint="@color/black"
+                android:drawableStart="@drawable/circle_shape"
+                android:drawableTint="@color/tag_pink"
+                android:drawablePadding="55dp"
+                android:paddingStart="55dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@null"
+                app:layout_constraintTop_toBottomOf="@+id/profile_tags_tag4"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/profile_tags_tag6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/item_others"
+                android:textSize="15sp"
+                android:textColorHint="@color/black"
+                android:drawableStart="@drawable/circle_shape"
+                android:drawableTint="@color/tag_brown"
+                android:drawablePadding="55dp"
+                android:paddingStart="55dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@null"
+                app:layout_constraintTop_toBottomOf="@+id/profile_tags_tag5"
+                android:autofillHints="" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_light_mode_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lighter_grey">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_light_mode_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardBackgroundColor="@color/lighter_orange"
+                app:cardElevation="1dp">
+
+                <ImageButton
+                    android:id="@+id/profile_light_mode_left_arrow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/left_arrow_icon"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Light Mode"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"/>
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:id="@+id/profile_light_mode_ok_arrow"
+                    android:text="Save"
+                    android:textSize="13dp"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:background="@drawable/sharp_button"
+                    android:padding="0dp"
+                    android:layout_marginRight="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+            <SeekBar
+                android:id="@+id/brightnessSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/profile_light_mode_card_view"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:max="255"
+                android:progress="127" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_change_password_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lighter_grey">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_change_password_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardBackgroundColor="@color/lighter_orange"
+                app:cardElevation="1dp">
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/profile_change_password_left_arrow"
+                    android:background="@drawable/left_arrow_icon"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Password"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"/>
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:id="@+id/profile_password_ok_arrow"
+                    android:text="Save"
+                    android:textSize="13dp"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:background="@drawable/sharp_button"
+                    android:padding="0dp"
+                    android:layout_marginRight="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/current_password_text"
+                android:hint="Current Password"
+                android:inputType="textPassword"
+                android:background="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/profile_change_password_card_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="15dp"/>
+
+            <!-- EditText for new password -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/new_password_text"
+                android:hint="New Password"
+                android:inputType="textPassword"
+                android:background="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/current_password_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="15dp"/>
+
+            <!-- EditText for confirm new password -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/confirm_new_password_text"
+                android:hint="Confirm New Password"
+                android:inputType="textPassword"
+                android:background="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/new_password_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="15dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_camera_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/profile_camera_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="40dp"
+                android:id="@+id/profile_capture_button"
+                android:src="@drawable/baseline_camera_24"
+                android:scaleType="centerCrop"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/white"/>
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/profile_camera_close"
+                android:src="@drawable/camera_close_icon"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/profile_camera_flip_button"
+                android:src="@drawable/baseline_flip_camera_android_24"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/white"/>
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@+id/profile_camera_flip_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/profile_camera_flash_off_button"
+                android:src="@drawable/baseline_flash_off_24"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/white"/>
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@+id/profile_camera_flip_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/profile_camera_flash_on_button"
+                android:src="@drawable/baseline_flash_on_24"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/white"
+                android:visibility="gone"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ViewFlipper>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

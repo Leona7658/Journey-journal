@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This Month"
+                android:textSize="20sp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="20dp"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_margin="0dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:strokeWidth="0dp"
+                    android:backgroundTint="@color/background_grey">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Distances"
+                            android:textSize="10sp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="16dp"/>
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/achievement_distance_icon" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/achievement_month_distance_data"
+                                android:text="67"
+                                android:textStyle="bold"
+                                android:textSize="22sp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="6dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="km"
+                                android:textSize="10sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:strokeWidth="0dp"
+                    android:backgroundTint="@color/background_grey">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time"
+                            android:textSize="10sp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="16dp"/>
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/achievement_time_icon"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/achievement_month_time_data"
+                                android:text="31"
+                                android:textStyle="bold"
+                                android:textSize="22sp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="6dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="mins"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:strokeWidth="0dp"
+                    android:backgroundTint="@color/background_grey">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Trips"
+                            android:textSize="10sp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="16dp"/>
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/achievement_trip_icon"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/achievement_month_trip_data"
+                                android:text="4"
+                                android:textStyle="bold"
+                                android:textSize="22sp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="6dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="times"
+                                android:textSize="10sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:strokeWidth="0dp"
+                    android:backgroundTint="@color/background_grey">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tags"
+                            android:textSize="10sp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="16dp"/>
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/achievement_tag_icon"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/achievement_month_tag_data"
+                                android:text="10"
+                                android:textStyle="bold"
+                                android:textSize="22sp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="6dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="stories"
+                                android:textSize="10sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Statistics"
+                android:textSize="20sp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="20dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="0dp"
+                android:backgroundTint="@color/background_grey">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Distances"
+                        android:textSize="10sp"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/orange"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/achievement_month_distance_compare"
+                        android:text="This month, you're travelling more on average than you did last month."
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/white"
+                        app:layout_constraintTop_toBottomOf="@+id/profile_settings_username"/>
+
+                    <com.github.mikephil.charting.charts.HorizontalBarChart
+                        android:id="@+id/achievement_month_distance_bar_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="0dp"
+                android:backgroundTint="@color/background_grey">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        android:textSize="10sp"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/orange"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/achievement_month_time_compare"
+                        android:text="This month, you're spending more time on travelling than you did las month."
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/white"
+                        app:layout_constraintTop_toBottomOf="@+id/profile_settings_username"/>
+
+                    <com.github.mikephil.charting.charts.HorizontalBarChart
+                        android:id="@+id/achievement_month_time_bar_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="0dp"
+                android:backgroundTint="@color/background_grey">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trips"
+                        android:textSize="10sp"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/orange"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/achievement_month_trip_compare"
+                        android:text="This month, you're having more trips than you did last month."
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/white"
+                        app:layout_constraintTop_toBottomOf="@+id/profile_settings_username"/>
+
+                    <com.github.mikephil.charting.charts.HorizontalBarChart
+                        android:id="@+id/achievement_month_trip_bar_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="0dp"
+                android:backgroundTint="@color/background_grey">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tags"
+                        android:textSize="10sp"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/orange"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/achievement_month_tag_compare"
+                        android:text="This month, you're posting more tags than you did last month."
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/white"
+                        app:layout_constraintTop_toBottomOf="@+id/profile_settings_username"/>
+
+                    <com.github.mikephil.charting.charts.HorizontalBarChart
+                        android:id="@+id/achievement_month_tag_bar_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
