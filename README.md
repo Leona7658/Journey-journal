@@ -9,11 +9,11 @@
 ![UI](demo-images/UI.png)
 
 ## Table of Contents
-- [Login/Register](#section-1)
-- [Trip](#section-2)
-- [Achievement](#section-3)
-- [Profile](#section-4)
-- [Library](#section-5)
+- [Login/Register](#login/registe)
+- [Trip](#trip)
+- [Achievement](#achievement)
+- [Profile](#profile)
+- [Library](#library)
 
 
 
